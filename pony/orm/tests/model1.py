@@ -34,6 +34,10 @@ class Mark(db.Entity):
     PrimaryKey(student, subject)
 
 
+class AutodiscoverStudent(db.AutodiscoverEntity):
+    _table_ = "Students"
+
+
 db.generate_mapping(check_tables=False)
 
 
